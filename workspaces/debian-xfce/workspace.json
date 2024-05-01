@@ -1,15 +1,13 @@
 {
   "description": "Debian XFCE with Nix",
-  "docker_registry": "https://docker.io/",
+  "docker_registry": "https://index.docker.io/v1/",
   "image_src": "debian.png",
-  "name": "docker.io/heywoodlh/kasm-debian:2024_05",
+  "name": "heywoodlh/kasm-debian:2024_05",
   "run_config": {
     "security_opt": [
       "seccomp=unconfined"
     ],
     "entrypoint": [
-      "/copy-nix.sh",
-      "&&",
       "/dockerstartup/kasm_default_profile.sh",
       "/dockerstartup/vnc_startup.sh",
       "/dockerstartup/kasm_startup.sh"
@@ -19,7 +17,7 @@
   "exec_config": {
     "first_launch": {
       "user": "root",
-      "cmd": "bash -c 'echo \"kasm-user  ALL=(ALL) NOPASSWD: ALL\" >> /etc/sudoers'"
+      "cmd": "/copy-nix.bash"
     }
   },
   "categories": [
