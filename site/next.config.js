@@ -5,7 +5,7 @@ const nextConfig = {
     name: 'heywoodlh kasm registry',
     description: 'kasm registry by heywoodlh, for fun',
     icon: '/img/logo.svg',
-    listUrl: 'https://kasmregistry.heywoodlh.io/',
+    listUrl: 'https://heywoodlh.github.io/kasm-registry',
     contactUrl: 'https://heywoodlh.io/contact',
   },
   reactStrictMode: true,
